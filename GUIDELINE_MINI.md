@@ -6,22 +6,22 @@
 
 | Lớp | Định nghĩa của bạn | Ví dụ/điểm phân biệt |
 | --- | --- | --- |
-| `car` | | |
-| `truck` | | |
-| `bus` | | |
-| `van` | | |
+| `car` | Xe con dùng để chở người, bao gồm sedan, hatchback, SUV, taxi và pickup. | Pickup được xếp vào `car`; không nhầm với xe tải chở hàng. |
+| `truck` | Xe tải dùng chủ yếu để vận chuyển hàng hóa, bao gồm xe tải thùng và xe đầu kéo. | Không xếp pickup hoặc xe cabin nhỏ kiểu xe con vào `truck`. |
+| `bus` | Xe có thiết kế chở nhiều hành khách, bao gồm xe buýt và minibus chở khách. | Phân biệt với `van` dựa vào mục đích và hình dáng xe chở khách công cộng. |
+| `van` | Xe van hoặc minivan dùng để chở người hoặc hàng hóa, có thân xe dạng hộp liền khối. | Không xếp xe buýt lớn vào `van`; không xếp sedan/SUV thông thường vào `van`. |
 
 ## Quy tắc chung
 
-- Box bám sát vật thể nghĩa là: ...
-- Vật thể bị che khuất: ...
-- Vật thể bị cắt bởi rìa ảnh: ...
-- Vật thể rất nhỏ/mơ hồ: ...
+- Box bám sát vật thể nghĩa là: box bao quanh sát phần thân xe thực sự nhìn thấy, hạn chế lấy nền, mặt đường hoặc vật thể bên cạnh.
+- Vật thể bị che khuất: vẫn gán nhãn nếu phần nhìn thấy đủ để xác định loại xe; box chỉ bao phần nhìn thấy và không đoán phần bị che.
+- Vật thể bị cắt bởi rìa ảnh: vẫn gán nếu nhận diện được lớp; box chạm đúng rìa ảnh và không mở rộng ra ngoài khung hình.
+- Vật thể rất nhỏ/mơ hồ: chỉ gán khi có thể xác định lớp một cách hợp lý; nếu không chắc thì không tự đoán, ghi lại ảnh và hỏi giảng viên.
 
 ## Ghi lại quyết định cho ít nhất ba ca mơ hồ
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_...` | | | |
-| `drive_...` | | | |
-| `drive_...` | | | |
+| `drive_...` | Xe có hình dáng khó phân biệt giữa ... và ... | Tôi quyết định ... / chưa gán và hỏi giảng viên | Dựa vào đặc điểm ... |
+| `drive_...` | Xe bị che khuất bởi ... | Tôi quyết định ... | Phần nhìn thấy vẫn đủ/không đủ để xác định ... |
+| `drive_...` | Xe bị cắt tại mép ảnh hoặc quá nhỏ | Tôi quyết định ... | Áp dụng quy tắc ... |

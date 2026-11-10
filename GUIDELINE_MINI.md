@@ -22,6 +22,6 @@
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_...` | Xe có hình dáng khó phân biệt giữa ... và ... | Tôi quyết định ... / chưa gán và hỏi giảng viên | Dựa vào đặc điểm ... |
-| `drive_...` | Xe bị che khuất bởi ... | Tôi quyết định ... | Phần nhìn thấy vẫn đủ/không đủ để xác định ... |
-| `drive_...` | Xe bị cắt tại mép ảnh hoặc quá nhỏ | Tôi quyết định ... | Áp dụng quy tắc ... |
+| `drive_008` | Xe tải ben chở vật liệu (`dump truck`) và xe minivan trắng chở hàng ở giữa ngã tư | Gán xe tải ben là `truck`, xe minivan trắng là `van` | Xe ben có thùng hàng hở lớn phục vụ chuyên chở; minivan có thân xe dạng hộp liền khối. |
+| `drive_008` | Xe buýt khớp nối dài (`articulated bus`) kích thước lớn che khuất một phần các xe phía sau | Gán một box `bus` ôm sát toàn bộ thân xe nhìn thấy; xe con phía sau chỉ gán nếu thấy rõ phần thân | Tuân thủ quy tắc box ôm sát phần nhìn thấy, không đoán phần bị che khuất. |
+| `drive_001` | Xe con ở xa phía rìa ngoài và xe bị cắt mép ảnh | Chỉ gán xe trong luồng giao thông chính; xe cắt mép chỉ gán khi nhìn rõ loại xe | Vật thể quá xa, nhỏ hoặc mơ hồ ở lề ngoài không gán để tránh gây nhiễu nhãn (FP). |
